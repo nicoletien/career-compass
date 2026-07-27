@@ -174,11 +174,8 @@ let bestCareer = Object.keys(careerScore).reduce(
 
 
 let matchPercentage = Math.min(
-
-careerScore[bestCareer] + 40,
-
-100
-
+Math.round((careerScore[bestCareer] / 100) * 100),
+95
 );
 
 
