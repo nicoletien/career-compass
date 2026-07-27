@@ -165,17 +165,42 @@ NEXT
 
 <script>
 
-let score = localStorage.getItem("match") || 0;
 
-let career = localStorage.getItem("career") || "Not available";
+let careerData = JSON.parse(
+localStorage.getItem("careerResults")
+);
+
+
+
+if(careerData){
+
+
+let topCareer = careerData[0];
 
 
 document.getElementById("score").innerHTML =
-score + "%";
+topCareer.score + "%";
 
 
 document.getElementById("careerResult").innerHTML =
-career;
+topCareer.name;
+
+
+}
+
+else{
+
+
+document.getElementById("score").innerHTML =
+"0%";
+
+
+document.getElementById("careerResult").innerHTML =
+"Not available";
+
+
+}
+
 
 
 </script>
