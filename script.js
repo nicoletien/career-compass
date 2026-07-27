@@ -1,57 +1,154 @@
-// Store user assessment result
+let careerScore = {
 
-let userResult = {
+    Chemist: 0,
 
-science:0,
+    EnvironmentalScientist: 0,
 
-technology:0,
+    AIEngineer: 0,
 
-business:0,
+    BusinessAnalyst: 0,
 
-communication:0,
-
-leadership:0,
-
-creativity:0,
-
-problemSolving:0
+    ResearchOfficer: 0
 
 };
 
 
-// Calculate career potential
 
 function calculateResult(){
 
 
-let totalScore = 0;
-
-
-// Personality score
-
-let personalityAnswers = document.querySelectorAll(
-'input[type="radio"]:checked'
+let answers = document.querySelectorAll(
+    'input[type="radio"]:checked'
 );
 
 
-personalityAnswers.forEach(answer=>{
+
+answers.forEach(answer => {
 
 
-if(answer.value=="Strongly Agree"){
+let value = answer.value;
 
-totalScore +=20;
+
+
+// ===== INTERESTS =====
+
+
+// Science interest
+
+if(value === "science"){
+
+    careerScore.Chemist += 35;
+
+    careerScore.EnvironmentalScientist += 25;
+
+    careerScore.ResearchOfficer += 30;
 
 }
 
-else if(answer.value=="Agree"){
 
-totalScore +=15;
+
+// Technology interest
+
+if(value === "technology"){
+
+    careerScore.AIEngineer += 40;
 
 }
 
-else{
 
-totalScore +=10;
+
+// Business interest
+
+if(value === "business"){
+
+    careerScore.BusinessAnalyst += 40;
+
+}
+
+
+
+// Research interest
+
+if(value === "research"){
+
+    careerScore.Chemist += 25;
+
+    careerScore.ResearchOfficer += 35;
+
+}
+
+
+
+// Environment interest
+
+if(value === "environment"){
+
+    careerScore.EnvironmentalScientist += 40;
+
+}
+
+
+
+
+
+// ===== PERSONALITY =====
+
+
+// Problem solving
+
+if(value === "problemSolving"){
+
+    careerScore.Chemist += 15;
+
+    careerScore.AIEngineer += 15;
+
+    careerScore.ResearchOfficer += 20;
+
+}
+
+
+
+// Communication
+
+if(value === "communication"){
+
+    careerScore.BusinessAnalyst += 20;
+
+    careerScore.EnvironmentalScientist += 10;
+
+}
+
+
+
+// Leadership
+
+if(value === "leadership"){
+
+    careerScore.BusinessAnalyst += 20;
+
+}
+
+
+
+// Curiosity
+
+if(value === "curiosity"){
+
+    careerScore.ResearchOfficer += 15;
+
+    careerScore.Chemist += 15;
+
+}
+
+
+
+// Resilience
+
+if(value === "resilience"){
+
+    careerScore.EnvironmentalScientist += 10;
+
+    careerScore.ResearchOfficer += 10;
 
 }
 
@@ -60,19 +157,45 @@ totalScore +=10;
 
 
 
-// Convert into percentage
+
+// Find highest career
 
 
-let potential = Math.min(
-Math.round(totalScore/3),
-100
+let bestCareer = Object.keys(careerScore).reduce(
+    
+(a,b)=> careerScore[a] > careerScore[b] ? a : b
+
 );
 
 
 
+
+// Calculate percentage
+
+
+let matchPercentage = Math.min(
+
+careerScore[bestCareer] + 40,
+
+100
+
+);
+
+
+
+
+// Save result
+
+
 localStorage.setItem(
-"potential",
-potential
+    "career",
+    bestCareer
+);
+
+
+localStorage.setItem(
+    "match",
+    matchPercentage
 );
 
 
