@@ -12,17 +12,7 @@
 
 </head>
 
-<script>
 
-let score =
-localStorage.getItem("potential");
-
-
-document.getElementById("score").innerHTML =
-score + "%";
-
-
-</script>
 <body>
 
 
@@ -139,7 +129,15 @@ AI Recommendation
 
 <p>
 
-Your personality and interests indicate strong potential in science, technology and research-related careers.
+Your recommended career based on your assessment:
+
+<br><br>
+
+<strong id="careerResult">
+
+Loading...
+
+</strong>
 
 </p>
 
@@ -165,7 +163,23 @@ NEXT
 </a>
 
 
+<script>
+
+let score = localStorage.getItem("match") || 0;
+
+let career = localStorage.getItem("career") || "Not available";
+
+
+document.getElementById("score").innerHTML =
+score + "%";
+
+
+document.getElementById("careerResult").innerHTML =
+career;
+
+
+</script>
+
 
 </body>
-
 </html>
