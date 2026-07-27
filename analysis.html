@@ -12,7 +12,17 @@
 
 </head>
 
+<script>
 
+let score =
+localStorage.getItem("potential");
+
+
+document.getElementById("score").innerHTML =
+score + "%";
+
+
+</script>
 <body>
 
 
@@ -71,9 +81,9 @@ Your Potential Score
 </h2>
 
 
-<div class="percentage">
+<div class="percentage" id="score">
 
-89%
+Loading...
 
 </div>
 
