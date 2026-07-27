@@ -161,11 +161,11 @@ if(value === "resilience"){
 // Find highest career
 
 
-let bestCareer = Object.keys(careerScore).reduce(
-    
-(a,b)=> careerScore[a] > careerScore[b] ? a : b
+// Rank all careers from highest to lowest
 
-);
+let rankedCareers = Object.entries(careerScore)
+.sort((a,b)=> b[1] - a[1]);
+
 
 
 
@@ -184,15 +184,22 @@ Math.round((careerScore[bestCareer] / 100) * 100),
 // Save result
 
 
-localStorage.setItem(
-    "career",
-    bestCareer
-);
+let careerResults = rankedCareers.map(career => {
+
+return {
+
+name: career[0],
+
+score: Math.min(career[1] + 40, 95)
+
+};
+
+});
 
 
 localStorage.setItem(
-    "match",
-    matchPercentage
+"careerResults",
+JSON.stringify(careerResults)
 );
 
 
