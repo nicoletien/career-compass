@@ -169,20 +169,7 @@ let rankedCareers = Object.entries(careerScore)
 
 
 
-
-// Calculate percentage
-
-
-let matchPercentage = Math.min(
-Math.round((careerScore[bestCareer] / 100) * 100),
-95
-);
-
-
-
-
-// Save result
-
+// Create career results
 
 let careerResults = rankedCareers.map(career => {
 
@@ -197,14 +184,14 @@ score: Math.min(career[1] + 40, 95)
 });
 
 
+// Save result
+
 localStorage.setItem(
 "careerResults",
 JSON.stringify(careerResults)
 );
 
 
+// Go to AI Analysis
 
 window.location.href="analysis.html";
-
-
-}
