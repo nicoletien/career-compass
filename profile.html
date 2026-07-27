@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Career Compass - Profile</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="overlay"></div>
+
+
+<header>
+
+<div class="logo">
+
+Career Compass
+
+</div>
+
+</header>
+
+
+
+<div class="profile-container">
+
+
+<h1>
+Profile
+</h1>
+
+
+<div class="profile-box">
+
+
+<label>
+Name
+</label>
+
+<input type="text" placeholder="Enter your name">
+
+
+
+<label>
+Age
+</label>
+
+<input type="number" placeholder="Enter your age">
+
+
+
+<label>
+Interests
+</label>
+
+<input type="text" placeholder="Example: Science, Technology, Art">
+
+
+
+<label>
+Highest Education
+</label>
+
+
+<select>
+
+<option>
+Select your education level
+</option>
+
+<option>
+SPM / O-Level
+</option>
+
+<option>
+STPM / A-Level
+</option>
+
+<option>
+Matriculation
+</option>
+
+<option>
+Bachelor's Degree
+</option>
+
+<option>
+Master's Degree
+</option>
+
+<option>
+PhD
+</option>
+
+<option>
+Others
+</option>
+
+
+</select>
+
+
+
+</div>
+
+
+<a href="#" onclick="showPermission()">
+
+<button class="nextButton">
+
+NEXT
+
+</button>
+
+</a>
+
+
+</div>
+
+
+
+
+<div id="permissionBox">
+
+
+<div class="popup">
+
+
+<h2>
+Permission Required
+</h2>
+
+
+<p>
+
+Do you allow Career Compass to record your assessment results?
+
+<br><br>
+
+The recorded data may be used to help the Malaysian Government improve education planning, career guidance and future workforce development.
+
+</p>
+
+
+<button onclick="allowRecord()">
+
+YES
+
+</button>
+
+
+<button onclick="denyRecord()">
+
+NO
+
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+<script>
+
+
+function showPermission(){
+
+document.getElementById("permissionBox").style.display="flex";
+
+}
+
+
+
+function allowRecord(){
+
+alert("Your information will be recorded securely.");
+
+window.location.href="assessment.html";
+
+}
+
+
+
+function denyRecord(){
+
+alert("Your information will not be recorded.");
+
+window.location.href="assessment.html";
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
