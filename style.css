@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    font-family: "Times New Roman", serif;
+    background: #eef7ff;
+    color: #333;
+}
+
+header {
+    padding: 20px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.container {
+    text-align: center;
+    margin-top: 200px;
+}
+
+button {
+    background: #8fd3ff;
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    font-size: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #6abcf5;
+}
