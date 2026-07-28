@@ -141,16 +141,70 @@ if(value === "environment"){
 
 // ===== PERSONALITY =====
 
-
-// Problem solving
-    
+// Problem Solving
 if(value === "problemSolving"){
 
     careerScore.Chemist += 15;
+    careerScore.AIEngineer += 20;
+    careerScore.SoftwareEngineer += 15;
+    careerScore.DataScientist += 15;
+    careerScore.ChemicalEngineer += 15;
 
-    careerScore.AIEngineer += 15;
+}
 
-    careerScore.ResearchOfficer += 20;
+// Communication
+if(value === "communication"){
+
+    careerScore.BusinessAnalyst += 20;
+    careerScore.MarketingExecutive += 20;
+    careerScore.Teacher += 20;
+    careerScore.PublicHealthOfficer += 15;
+
+}
+
+// Leadership
+if(value === "leadership"){
+
+    careerScore.BusinessAnalyst += 20;
+    careerScore.MarketingExecutive += 15;
+    careerScore.Teacher += 10;
+
+}
+
+// Curiosity
+if(value === "curiosity"){
+
+    careerScore.Chemist += 15;
+    careerScore.Microbiologist += 20;
+    careerScore.FoodTechnologist += 15;
+    careerScore.DataScientist += 15;
+
+}
+
+// Resilience
+if(value === "resilience"){
+
+    careerScore.EnvironmentalScientist += 15;
+    careerScore.MedicalLaboratoryScientist += 15;
+    careerScore.CivilEngineer += 10;
+
+}
+
+// Research
+if(value === "research"){
+
+    careerScore.Chemist += 20;
+    careerScore.Microbiologist += 20;
+    careerScore.FoodTechnologist += 15;
+    careerScore.ScienceOfficer += 15;
+
+}
+
+// Creative
+if(value === "creative"){
+
+    careerScore.GraphicDesigner += 25;
+    careerScore.UXUIDesigner += 25;
 
 }
 
