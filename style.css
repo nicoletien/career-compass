@@ -392,11 +392,13 @@ font-family:"Times New Roman";
 
 .nextButton{
 
-position:fixed;
+display:block;
 
-right:40px;
+margin-top:35px;
 
-bottom:40px;
+margin-left:auto;
+
+margin-right:0;
 
 padding:15px 50px;
 
@@ -409,6 +411,12 @@ border:none;
 border-radius:40px;
 
 cursor:pointer;
+
+font-family:"Times New Roman",serif;
+
+color:#17365d;
+
+transition:.3s;
 
 }
 
