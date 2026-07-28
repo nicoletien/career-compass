@@ -1,15 +1,44 @@
 let careerScore = {
 
+    // Science
     Chemist: 0,
-
+    Microbiologist: 0,
+    FoodTechnologist: 0,
     EnvironmentalScientist: 0,
+    Pharmacist: 0,
 
+    // Technology
     AIEngineer: 0,
+    SoftwareEngineer: 0,
+    DataScientist: 0,
+    CybersecurityAnalyst: 0,
 
+    // Engineering
+    ChemicalEngineer: 0,
+    CivilEngineer: 0,
+    MechanicalEngineer: 0,
+
+    // Healthcare
+    MedicalLaboratoryScientist: 0,
+    PublicHealthOfficer: 0,
+
+    // Business
     BusinessAnalyst: 0,
+    Accountant: 0,
+    MarketingExecutive: 0,
+    FinancialAnalyst: 0,
 
-    ResearchOfficer: 0
+    // Education
+    Teacher: 0,
+    Lecturer: 0,
 
+    // Creative
+    GraphicDesigner: 0,
+    UXUIDesigner: 0,
+
+    // Government
+    ScienceOfficer: 0,
+    SustainabilityOfficer: 0
 };
 
 
