@@ -62,57 +62,76 @@ let value = answer.value;
 // ===== INTERESTS =====
 
 
-// Science interest
-
+// Science
 if(value === "science"){
 
-    careerScore.Chemist += 35;
-
-    careerScore.EnvironmentalScientist += 25;
-
-    careerScore.ResearchOfficer += 30;
+    careerScore.Chemist += 40;
+    careerScore.Microbiologist += 35;
+    careerScore.FoodTechnologist += 35;
+    careerScore.Pharmacist += 30;
 
 }
 
-
-
-// Technology interest
-
+// Technology
 if(value === "technology"){
 
     careerScore.AIEngineer += 40;
+    careerScore.SoftwareEngineer += 35;
+    careerScore.DataScientist += 35;
+    careerScore.CybersecurityAnalyst += 30;
 
 }
 
+// Engineering
+if(value === "engineering"){
 
+    careerScore.ChemicalEngineer += 40;
+    careerScore.CivilEngineer += 35;
+    careerScore.MechanicalEngineer += 35;
 
-// Business interest
+}
 
+// Healthcare
+if(value === "healthcare"){
+
+    careerScore.Pharmacist += 35;
+    careerScore.MedicalLaboratoryScientist += 40;
+    careerScore.PublicHealthOfficer += 30;
+
+}
+
+// Business
 if(value === "business"){
 
-    careerScore.BusinessAnalyst += 40;
+    careerScore.BusinessAnalyst += 35;
+    careerScore.Accountant += 35;
+    careerScore.MarketingExecutive += 35;
+    careerScore.FinancialAnalyst += 35;
 
 }
 
+// Education
+if(value === "education"){
 
-
-// Research interest
-
-if(value === "research"){
-
-    careerScore.Chemist += 25;
-
-    careerScore.ResearchOfficer += 35;
+    careerScore.Teacher += 40;
+    careerScore.Lecturer += 35;
 
 }
 
+// Creative
+if(value === "creative"){
 
+    careerScore.GraphicDesigner += 40;
+    careerScore.UXUIDesigner += 35;
 
-// Environment interest
+}
 
+// Environment
 if(value === "environment"){
 
     careerScore.EnvironmentalScientist += 40;
+    careerScore.SustainabilityOfficer += 35;
+    careerScore.ScienceOfficer += 30;
 
 }
 
@@ -124,7 +143,7 @@ if(value === "environment"){
 
 
 // Problem solving
-
+    
 if(value === "problemSolving"){
 
     careerScore.Chemist += 15;
