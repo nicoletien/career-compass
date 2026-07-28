@@ -195,3 +195,4 @@ JSON.stringify(careerResults)
 // Go to AI Analysis
 
 window.location.href="analysis.html";
+}
